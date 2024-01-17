@@ -54,6 +54,8 @@ extension TextThemeExtension on BuildContext {
   TextStyle? get f16700 => textTheme.titleSmall;
   TextStyle? get f16500 =>
       textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w500);
+  TextStyle? get f16600 =>
+      textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600);
   TextStyle? get f16400 =>
       textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w400);
 

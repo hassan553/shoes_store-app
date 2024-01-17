@@ -8,6 +8,17 @@ abstract class AppTheme {
   static ThemeData light() {
     return ThemeData.light().copyWith(
       scaffoldBackgroundColor: AppColors.offWhite,
+      appBarTheme: AppBarTheme(
+        centerTitle: true,
+        backgroundColor: AppColors.offWhite,
+        elevation: 0,
+        titleTextStyle: TextStyle(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w600,
+            color: AppColors.darkBlack,
+            overflow: TextOverflow.ellipsis,
+            fontFamily: _fontFamily),
+      ),
       textTheme: TextTheme(
         displayMedium: TextStyle(
             fontSize: 30.sp,
