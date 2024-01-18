@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoes_app/core/extension/navigation_extension.dart';
 import 'package:shoes_app/core/extension/text_theme_extension.dart';
+import 'package:shoes_app/features/auth/presentation/views/login_view.dart';
+import 'package:shoes_app/features/home/presentation/views/home_view.dart';
+import 'package:shoes_app/features/home/presentation/views/main_view.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/widgets/custom_button.dart';
@@ -24,7 +28,9 @@ class RegisterView extends StatelessWidget {
               const InputFormWidgets(),
               SizedBox(height: 30.h),
               CustomButton(
-                  function: () {},
+                  function: () {
+                    context.navigateToAndRemoveUntil(const MainView());
+                  },
                   title: 'Sign Up',
                   color: AppColors.primaryColor,
                   textStyle: context.f20700?.copyWith(color: AppColors.white)),
@@ -53,7 +59,10 @@ class SignUpOptionsWidget extends StatelessWidget {
         Text('Already have an account? ',
             style: context.f18600?.copyWith(color: AppColors.lightGrey)),
         InkWell(
-            onTap: () {}, child: Text('Sign In Here', style: context.f18600)),
+            onTap: () {
+              context.navigateToPage(const LoginView());
+            },
+            child: Text('Sign In Here', style: context.f18600)),
       ],
     );
   }

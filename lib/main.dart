@@ -5,6 +5,7 @@ import 'package:shoes_app/features/home/presentation/views/favorite_view.dart';
 import 'package:shoes_app/features/home/presentation/views/home_view.dart';
 import 'core/utils/app_theme.dart';
 import 'package:device_preview/device_preview.dart';
+import 'features/auth/presentation/views/login_view.dart';
 import 'features/onboarding/presentation/views/splash_view.dart';
 import 'features/home/presentation/views/product_details_view.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           title: 'NIKE ',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light(),
-          home: const SplashView(),
+          home: const LoginView(),
         );
       },
     );
